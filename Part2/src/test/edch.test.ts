@@ -58,6 +58,7 @@ describe('ECDH test', () => {
     // Alice encrypt with her private key and bob pubkey
     const ciphertext = await encrypt(aliceMessage, ecdhSharedKey);
 
+
     const maliciousPubKey = [eddsa.prv2pub(123n.toString())];
     const ecdhSharedIncorrectKey = await genEcdhSharedKey({
       eddsa,
